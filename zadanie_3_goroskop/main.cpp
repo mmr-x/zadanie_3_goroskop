@@ -1,10 +1,11 @@
 ﻿#include <iostream>
+#include <string>
 
 int main( )
-{
+{    
     // я перевёл всё через переводчик могут быть ошибки в тексте
 
-    std::string incorrect_zodiac = "Horoscope for you is under development. Come back a little later ;)";
+    std::string incorrect_zodiac = "Horoscope for you has not been compiled yet";
     std::string gender = "";
     std::string zodiac_sign = "";
 
@@ -23,27 +24,27 @@ int main( )
 
     if ( gender == "man" )
     {
-        if ( zodiac_sign == "water" )
+        if ( zodiac_sign == "aquarius" || zodiac_sign == "cancer" || zodiac_sign == "pisces" )
         {
             if ( years < 40 )
                 std::cout << "Today is a very fruitful day. You can achieve what previously seemed almost impossible." << std::endl;
             else
-                std::cout << "You must be strictly under 40 years old" << std::endl;
+                std::cout << incorrect_zodiac << std::endl;
         }
         else
             std::cout << incorrect_zodiac << std::endl;
     }
     else if ( gender == "girl" )
     {
-        if ( zodiac_sign == "earthen" )
+        if ( zodiac_sign == "taurus" || zodiac_sign == "virgo" || zodiac_sign == "capricorn" )
         {
-            if ( years > ( 15 & 30 ) )
+            if ( years >= 15 && years <= 30 )
             {
                 std::cout << "This evening is suitable for socializing with friends, holding home celebrations and impromptu parties." << std::endl
-                    << "It will not only be fun, but also interesting : there will be something to do that will captivate everyone." << std::endl;
+                    << "It will not only be fun, but also interesting: there will be something to do that will captivate everyone." << std::endl;
             }
             else
-                std::cout << "You must be between the ages of 15 and 30 years or older" << std::endl;
+                std::cout << incorrect_zodiac << std::endl;
         }
         else
             std::cout << incorrect_zodiac << std::endl;
